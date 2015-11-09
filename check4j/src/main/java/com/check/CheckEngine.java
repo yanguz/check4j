@@ -1,37 +1,29 @@
 package com.check;
 
-import java.util.List;
-
 import org.mvel2.MVEL;
 
 public class CheckEngine {
-	/**
-	 * 单表达式，单对象
-	 * 
-	 * @param expression
-	 * @param ctx
-	 * @return
-	 */
-	public static Object check(String expression, Object ctx) {
-		return MVEL.eval(expression, ctx);
+	// 1.单条规则，单条数据
+	public static OneRuleOneDataObject check(OneRuleOneDataObject obj) {
+		Boolean result = MVEL.evalToBoolean(obj.getExpression(), obj.getData());
+		obj.setResult(result);
+		return obj;
 	}
 
-	/**
-	 * 单表达式，多对象
-	 * 
-	 * @param expression
-	 * @param ctx
-	 * @return
-	 */
-	public static Object check(String expression, List<Object> ctx) {
+	// 2.单条规则，多条数据
+	public static OneRuleMultiDataObject check(OneRuleMultiDataObject obj) {
+		String rule = obj.getExpression();
+		
 		return null;
 	}
 
-	public static Object check(List<String> expressions, Object ctx) {
+	// 3.多条规则，单条数据
+	public static MultiRuleOneDataObject check(MultiRuleOneDataObject obj) {
 		return null;
 	}
 
-	public static Object check(List<String> expressions, List<Object> ctx) {
+	// 4.多条规则，多条数据
+	public static MultiRuleMultiDataObject check(MultiRuleMultiDataObject obj) {
 		return null;
 	}
 }
