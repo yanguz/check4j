@@ -2,17 +2,23 @@ package com.check;
 
 import java.util.List;
 
-public class OneRuleMultiDataObject {
-	private String expression;
+/**
+ * 单条规则，多条数据
+ * 
+ * @author 80274996
+ * 
+ */
+public class OneRuleMultiDataObject extends CheckDataObject {
+	private String rule;
 	private List<Object> datas;
 	private List<Boolean> results;
 
-	public String getExpression() {
-		return expression;
+	public String getRule() {
+		return rule;
 	}
 
-	public void setExpression(String expression) {
-		this.expression = expression;
+	public void setRule(String rule) {
+		this.rule = rule;
 	}
 
 	public List<Object> getDatas() {

@@ -2,10 +2,16 @@ package com.check;
 
 import java.util.List;
 
-public class MultiRuleMultiDataObject {
+/**
+ * 多条规则，多条数据
+ * 
+ * @author 80274996
+ * 
+ */
+public class MultiRuleMultiDataObject extends CheckDataObject {
 	private List<String> rules;
 	private List<Object> datas;
-	private List<Boolean> results;
+	private List<List<Boolean>> results;
 
 	public List<String> getRules() {
 		return rules;
@@ -23,11 +29,11 @@ public class MultiRuleMultiDataObject {
 		this.datas = datas;
 	}
 
-	public List<Boolean> getResults() {
+	public List<List<Boolean>> getResults() {
 		return results;
 	}
 
-	protected void setResults(List<Boolean> results) {
+	public void setResults(List<List<Boolean>> results) {
 		this.results = results;
 	}
 

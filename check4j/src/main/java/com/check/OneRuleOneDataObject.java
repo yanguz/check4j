@@ -1,16 +1,22 @@
 package com.check;
 
-public class OneRuleOneDataObject {
-	private String expression;
+/**
+ * 单条规则，单条数据
+ * 
+ * @author 80274996
+ * 
+ */
+public class OneRuleOneDataObject extends CheckDataObject {
+	private String rule;
 	private Object data;
 	private Boolean result;
 
-	public String getExpression() {
-		return expression;
+	public String getRule() {
+		return rule;
 	}
 
-	public void setExpression(String expression) {
-		this.expression = expression;
+	public void setRule(String rule) {
+		this.rule = rule;
 	}
 
 	public Object getData() {

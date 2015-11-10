@@ -2,7 +2,13 @@ package com.check;
 
 import java.util.List;
 
-public class MultiRuleOneDataObject {
+/**
+ * 多条规则，单条数据
+ * 
+ * @author 80274996
+ * 
+ */
+public class MultiRuleOneDataObject extends CheckDataObject {
 	private List<String> rules;
 	private Object data;
 	private List<Boolean> results;
